@@ -1,0 +1,640 @@
+
+
+$fonts: "Open Sans", sans-serif
+$grey: #313332
+$light-blue: rgb(4,201,236)
+
+
+=vertical-margin($margin)
+	margin-top: $margin
+	margin-bottom: $margin
+
+
+* 
+	box-sizing: border-box
+
+
+body
+	margin: 0
+	font-family: $fonts
+	font-size: 18px
+
+
+.row:before,
+.row:after 
+	content: " "
+	display: table
+	clear: both
+
+
+header
+	background-color: #313234
+	height: 50px
+	background-color: rgba(0,0,0,0.5)
+
+
+.container 
+	width: 100%
+	max-width: 1200px
+	margin: auto
+
+
+header 
+	nav 
+		img
+			padding: 10px 0
+
+
+		ul 
+			padding: 0
+			margin: 0
+			list-style-type: none
+			float: right
+
+
+			li 
+				display: inline-block
+
+				a 
+					line-height: 50px
+					padding: 0 20px
+					display: block
+					color: #FFF
+					text-decoration: none
+					text-transform: uppercase
+
+
+
+.vertical-space 
+	+vertical-margin(50px)
+
+
+.hero
+	width: 100%
+	height: 100vh
+	background-image: url(https://images.unsplash.com/1/macbook-air-all-faded-and-stuff.jpg)
+	background-size: cover
+	background-position: center
+	overflow: hidden
+
+
+.slogan 
+	max-width: 50vw
+	padding-top: 20px
+	padding-bottom: 20px
+	padding-left: 40px
+	padding-right: 200px
+	margin: 25vh 0
+	background-color: rgba(0,0,0,0.7)
+	float: right
+	text-align: left
+	text-transform: uppercase
+	color: white
+	font-weight: 300
+	line-height: 25px
+
+
+.slogan > h2 > span 
+	font-weight: 400
+
+
+[class*="col-"]
+	float: left
+	min-height: 1px
+	font-size: 18px
+
+
+.col-1 
+	width: 8.33%
+.col-2 
+	width: 16.66%
+.col-3 
+	width: 25%
+.col-4 
+	width: 33.33%
+.col-5 
+	width: 41.66%
+.col-6 
+	width: 50%
+.col-7 
+	width: 58.33%
+.col-8 
+	width: 66.66%
+.col-9 
+	width: 75%
+.col-10 
+	width: 83.33%
+.col-11 
+	width: 91.66%
+.col-12 
+	width: 100%
+
+.col-offset-0 
+	margin-left: 0
+.col-offset-1 
+	margin-left: 8.33%
+.col-offset-2 
+	margin-left: 16.66%
+.col-offset-3 
+	margin-left: 25%
+.col-offset-4 
+	margin-left: 33.33%
+.col-offset-5 
+	margin-left: 41.66%
+.col-offset-6 
+	margin-left: 50%
+.col-offset-7 
+	margin-left: 58.33%
+.col-offset-8 
+	margin-left: 66.66%
+.col-offset-9 
+	margin-left: 75%
+.col-offset-10 
+	margin-left: 83.33%
+.col-offset-11 
+	margin-left: 91.66%
+.col-offset-12 
+	margin-left: 100%
+
+.welcome 
+	margin-top: 40px
+	text-align: center
+	color: $grey
+	display: block
+
+
+	[class*="col-"] 
+		margin-bottom: 50px
+
+
+	[class*="icon-btn-"] 
+		width: 75px
+		height: 75px	
+		border: 0
+		border-radius: 10px			
+		font-size: 40px	
+		background-color: $grey
+		color: white
+
+
+h4 
+	font-size: 24px
+	text-transform: uppercase
+
+
+.headerwtext 
+	text-align: center
+	display: block
+
+
+	h1 
+		text-transform: uppercase
+		font-size: 25px
+
+
+	p 
+		margin-bottom: 70px
+		padding: 0 100px
+
+
+.gallery
+	cursor: pointer
+
+
+	[class*="col-"] 
+		position: relative
+		padding: 0
+		margin: 0
+
+
+	img 
+		float: left
+		height: 170px
+		width: 100%
+		display: block
+		object-fit: cover
+
+
+.layer 
+	background-color: rgba(0, 0, 0, .5)
+	position: absolute
+	top: 0
+	width: 100%
+	height: 100%
+	opacity: 0
+	transition: .25s
+	&:hover,
+	&:focus
+		opacity: 1
+
+	div
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		margin: 0
+		margin-right: -50%
+
+
+	span 
+		cursor: pointer
+
+
+.team
+	margin-top: 50px
+	margin-bottom: 50px
+	text-align: center
+
+
+.teamimage 
+	width: 100%
+	position: relative
+	padding-top: 100%
+
+
+	img 
+		height: 60%
+		width: 60%
+		border-radius: 50%
+		margin: 20%
+		object-fit: cover
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+
+
+.layer-teamimage 
+	color: white
+	font-weight: bold
+	background-color: rgba(50, 50, 50, .5)
+	position: absolute
+	top: 0
+	height: 60%
+	width: 60%
+	border-radius: 50%
+	margin: 20%
+	opacity: 0
+	transition: .25s
+	&:hover,
+	&:focus 
+		opacity: 1
+		cursor: pointer
+
+
+	span 
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		margin: 0
+		margin-right: -50%
+
+
+.name 
+	text-align: center
+	margin-bottom: 20px
+
+
+.awesome 
+	+vertical-margin(50px)
+	padding-top: 40px
+	padding-bottom: 0
+	background-color: #797B7A
+	background-size: 100% auto
+	display: block
+	overflow: hidden
+
+
+.image 
+	padding-left: 10%
+
+
+	img 
+		height: 250px
+
+
+.text 
+	padding-left: 30px
+	color: white
+	float: right
+	font-size: 18px
+	
+	h1
+		text-transform: uppercase
+
+
+.italic 
+	font-style: italic
+	padding-left: inherit
+
+
+
+.numbers > .row 
+	> [class*="col-"] 
+		margin: 0 0 30px
+		padding: 0
+		text-align: center
+		display: inline-block
+
+	> .numbers-col
+		> h1
+			text-transform: uppercase
+			color: #000
+			font-weight: bold
+			font-size: 50px
+			margin-bottom: 0
+
+		> p
+			text-transform: uppercase
+			color: $light-blue
+			font-weight: bold
+
+
+.footer 
+	background-color: $grey
+	color: white
+	background-size: 100% auto
+	display: block
+
+	[class*="col-"] 
+		font-size: 12px
+		margin-left: 0
+		display: inline-block
+		padding: 12px 12px 12px 20px
+		font-size: 18px
+
+
+.icon-btn 
+	color: white
+	background-color: $light-blue
+	width: 60px
+	height: 60px
+	border: 0
+	margin: 10px 10px 3px 0
+	cursor: pointer
+	font-size: 40px
+	line-height: 55px
+
+
+.rowin [class*="col-"] 
+	padding: 0
+
+.footer h2
+	text-transform: uppercase
+
+.copyright .cop 
+	@extend .rowin
+
+.copyright 
+	background-color: #252726
+	color: white
+	text-align: center
+	font-size: 18px
+	margin: 0
+	padding: 0
+
+
+
+@media screen and (min-width: 1200px) 
+
+	
+	header > nav ul > li > a:hover 
+		background-color: #ccc
+		color: $light-blue
+	
+
+	.welcome .col-4.col-s-12:hover button 
+		background-color: #00C7E8
+	
+
+	.welcome .col-4.col-s-12:hover h4 
+		color: #00C7E8
+	
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1199px) 
+
+
+	header 
+		height: auto
+	
+		nav 
+			img 
+				padding: 10px 0 10px 40px
+	
+			ul 
+				float: none
+				padding: 0 0 0 20px
+	
+	.col-m-1 
+		width: 8.33%
+	.col-m-2 
+		width: 16.66%
+	.col-m-3 
+		width: 25%
+	.col-m-4 
+		width: 33.33%
+	.col-m-5 
+		width: 41.66%
+	.col-m-6 
+		width: 50%
+	.col-m-7 
+		width: 58.33%
+	.col-m-8 
+		width: 66.66%
+	.col-m-9 
+		width: 75%
+	.col-m-10 
+		width: 83.33%
+	.col-m-11 
+		width: 91.66%
+	.col-m-12 
+		width: 100%
+	
+	
+	.col-m-4 p 
+		padding: 0 30px 0 30px
+	
+	
+	.layer 
+		background-color: transparent
+		position: absolute
+		top: 0
+		width: 100%
+		height: 100%
+		opacity: 1
+		transition: .25s
+	
+		div 
+
+			display: block
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: 0
+			margin-right: -50%
+			cursor: pointer
+	
+	
+	.layer-teamimage 
+		opacity: 1
+	
+	
+	.italic 
+		padding-left: 0
+	
+	
+	.icon-btn 
+		width: 80px
+		height: 80px
+		border: 0
+		margin: 10px 10px 10px 0
+		font-size: 60px
+		line-height: 60px
+	
+	
+
+
+@media screen and (max-width: 767px) 
+
+	
+	header 
+		height: auto
+		
+		nav 
+			img 
+				display: block
+				margin: auto
+	
+			ul 
+				margin: 0
+				float: none
+	
+				li 
+					width: 100%
+					padding: 1em 0
+					text-align: center
+					font-size: 20px
+	
+					a 
+						padding: 0
+	
+	
+	.slogan 
+		max-width: 100vw
+		margin-top: 20vh
+		padding-top: 20px
+		padding-bottom: 20px
+		padding-left: 40px
+		padding-right: 40px
+		text-align: center
+		text-transform: uppercase
+		color: white
+		font-weight: 300
+		line-height: 30px
+	
+
+	.col-s-1 
+		width: 8.33%
+	.col-s-2 
+		width: 16.66%
+	.col-s-3 
+		width: 25%
+	.col-s-4 
+		width: 33.33%
+	.col-s-5 
+		width: 41.66%
+	.col-s-6 
+		width: 50%
+	.col-s-7 
+		width: 58.33%
+	.col-s-8 
+		width: 66.66%
+	.col-s-9 
+		width: 75%
+	.col-s-10 
+		width: 83.33%
+	.col-s-11 
+		width: 91.66%
+	.col-s-12 
+		width: 100%
+	
+	[class*="col-"] 
+		text-align: center
+		padding: 12px
+	
+	
+	.headerwtext p 
+		padding: 0 20px
+	
+	
+	.layer 
+		background-color: transparent
+		position: absolute
+		top: 0
+		width: 100%
+		height: 100%
+		opacity: 1
+		transition: .25s
+
+	
+		div 
+			display: block
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: 0
+			margin-right: -50%
+			cursor: pointer
+	
+	
+	.layer-teamimage 
+		opacity: 1
+	
+	
+	.awesome 
+		background-color: #797B7A
+		background-size: 100% auto
+		margin-top: 5vh
+	
+	
+	.image 
+		margin-left: 0
+		
+			
+	
+	.numbers > .row 
+		> [class*="col-"] 
+			padding: 0
+			text-align: center
+			display: inline-block
+	
+	
+	.footer [class*="col-"] 
+		margin-left: 0
+		text-align: center
+		display: inline-block
+		padding: 12px
+		float: none
+	
+
+	.icon-btn 
+		width: 100px
+		height: 100px
+		border: 0
+		margin: 10px 10px 10px 0
+		font-size: 70px
+		line-height: 70px
+	
+
+	.rowin [class*="col-"] 
+		padding: 0
+	
+	
+
+
+
