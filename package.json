@@ -14,5 +14,21 @@
     "grunt-contrib-imagemin": "^2.0.1",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-sass": "^2.0.0"
-  }
+  },
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-contrib-imagemin": "^2.0.1",
+    "grunt-sass": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katapo/grunt.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/katapo/grunt/issues"
+  },
+  "homepage": "https://github.com/katapo/grunt#readme"
 }
